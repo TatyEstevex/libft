@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 14:05:04 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/20 14:59:40 by tde-alme         ###   ########.fr       */
+/*   Created: 2026/04/20 13:33:01 by tde-alme          #+#    #+#             */
+/*   Updated: 2026/04/20 13:58:00 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memset(void *s, int c, size_t n)
-{
-    unsigned char *ptr = s;
-    size_t i = 0;
+#include <stdio.h>
 
-    while(i < n)
-    {
-        ptr[i] = (unsigned char) c;
+int ft_strlen(char *c)
+{
+    int i;
+
+    i = 0;
+    while (c[i] != '\0' )
         i++;
-    }
-    return (s);
+    return(i);
 }
 
+int main(void)
+{
+    char *c;
+
+    c = "cenas";
+    printf ("%d", ft_strlen(c));
+    return(0);
+
+}
