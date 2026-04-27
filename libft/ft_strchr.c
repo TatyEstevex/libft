@@ -6,7 +6,7 @@
 /*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 16:24:16 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/24 17:18:05 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/04/25 16:30:12 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char *ft_strchr(const char *s, int c)
 int main(void)
 {
     const char *s = "nao percebi";
-    char * res;
+    char *res;
     
     res = ft_strchr(s, 'a');
     if(res != NULL)
