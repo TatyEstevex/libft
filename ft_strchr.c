@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 16:24:16 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/25 16:30:12 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/04/29 12:25:08 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char *ft_strchr(const char *s, int c)
         return ((char *) (s + i));
     return (NULL);
 }
-
+/* 
 int main(void)
 {
     const char *s = "nao percebi";
@@ -38,3 +38,4 @@ int main(void)
         printf("Não encontrado\n");
     return(0);
 }
+ */
