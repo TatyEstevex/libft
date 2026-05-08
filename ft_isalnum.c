@@ -6,13 +6,16 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:19:50 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/20 13:40:32 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:55:37 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-    if ( (i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z') || (i >= '0' && i <= '9'))
-        return(1);
-    return(0);
+	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z')
+		|| (i >= '0' && i <= '9'))
+		return (1);
+	return (0);
 }

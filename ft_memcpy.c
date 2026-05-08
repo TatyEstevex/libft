@@ -6,28 +6,27 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 13:43:13 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/05 11:53:45 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:16:09 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <stdio.h>
+#include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char *d;
-    const unsigned char *s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-    d = (unsigned char *) dest;
-    s = (const unsigned char *) src;
-    while (n > 0)
-    {
-
-        *d = *s;
-        d++;
-        s++;
-        n--;
-    }
-    return (dest);
+	d = (unsigned char *) dest;
+	s = (const unsigned char *) src;
+	while (n > 0)
+	{
+		*d = *s;
+		d++;
+		s++;
+		n--;
+	}
+	return (dest);
 }
 /*
 int main(void)

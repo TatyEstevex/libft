@@ -6,13 +6,13 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:24:19 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/20 13:40:21 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:22:57 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 127)
-        return(1);
-    return(0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

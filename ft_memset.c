@@ -6,20 +6,21 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 14:05:04 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/20 14:59:40 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:46:57 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char *ptr = s;
-    size_t i = 0;
+	unsigned char	*ptr;
+	size_t			i;
 
-    while(i < n)
-    {
-        ptr[i] = (unsigned char) c;
-        i++;
-    }
-    return (s);
+	ptr = s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }
-

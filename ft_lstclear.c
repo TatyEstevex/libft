@@ -3,30 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 16:09:13 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/07 16:21:59 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:02:04 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct s_list
-{
-    void            *conteudo;
-    struct s_list   *next;
-} t_list;
+#include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    t_list  *temp;
-    
-    if(!lst || !del)
-        return;
-    while(*lst)
-    {
-        temp = (*lst) -> next;
-        del ((*lst) -> conteudo);
-        free (*lst);
-        *lst = temp;
-    }
+	t_list	*temp;
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)-> next;
+		del ((*lst)-> conteudo);
+		free (*lst);
+		*lst = temp;
+	}
 }

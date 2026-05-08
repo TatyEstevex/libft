@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 12:52:12 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/21 16:46:53 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:55:24 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *p;
+	unsigned char	*p;
 
-    p = (unsigned char *) s;
-    while (n > 0)
-        {
-            *p = 0;
-            p++;
-            n--;
-        }
+	p = (unsigned char *)s;
+	while (n > 0)
+	{
+		*p = 0;
+		p++;
+		n--;
+	}
 }
+/*
 int main(void)
 {
     unsigned char str [20] = "aiocaraças";
@@ -32,3 +33,4 @@ int main(void)
     printf("%s \n", str);
     return (0);
 }
+*/

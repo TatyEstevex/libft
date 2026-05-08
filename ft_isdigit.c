@@ -6,13 +6,13 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:07:56 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/20 13:40:19 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:23:35 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (d >= '0' && d <= '9' )
-        return(1);
-    return(0);
+	if (d >= '0' && d <= '9' )
+		return (1);
+	return (0);
 }

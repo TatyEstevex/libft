@@ -6,13 +6,13 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:29:20 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/20 13:40:28 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 14:29:49 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if( c >= 32 && c <= 126)
-        return(1);
-    return(0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

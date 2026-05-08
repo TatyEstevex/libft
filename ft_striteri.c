@@ -6,33 +6,35 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 15:25:07 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/05 16:20:13 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:57:32 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    int  i;
-   
-    i = 0;
-    while (s[i])
-    {
-        f(i, &s[i]);
-        i++;
-    }
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-void    mudaste(unsigned int t, char *c)
+void	mudaste(unsigned int t, char *c)
 {
-    *c = *c + t;
+	*c = *c + t;
 }
-int main(void)
+/*
+int	main(void)
 {
-    char s[] = "abcd";
+	char s[] = "abcd";
 
-    ft_striteri(s, mudaste);
-    printf("%s\n",s);
-    return (0);
+	ft_striteri(s, mudaste);
+	printf("%s\n", s);
+	return (0);
 }
+*/

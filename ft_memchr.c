@@ -3,33 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 12:20:26 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/27 13:44:32 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/08 15:12:49 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void *memchr(const void *s, int c, size_t n)
+void	*memchr(const void *s, int c, size_t n)
 {
-    unsigned char *str;
-    unsigned char proc;
-    size_t i;
+	unsigned char	*str;
+	unsigned char	proc;
+	size_t			i;
 
-    str = (unsigned char *) s;
-    proc = (unsigned char) c;
-    i = 0;
-    if (n == 0)
-        return NULL;
-    while (str[i] != proc && i < (n -1))
-        i++;
-    if (str[i] == proc)
-        return ((void *) &str[i]);
-    return NULL;
+	str = (unsigned char *) s;
+	proc = (unsigned char) c;
+	i = 0;
+	if (n == 0)
+		return (NULL);
+	while (str[i] != proc && i < (n -1))
+		i++;
+	if (str[i] == proc)
+		return ((void *) &str[i]);
+	return (NULL);
 }
-
+/*
 int main(void)
 {
     const void *s = "vamos verD se e isto";
@@ -43,3 +43,4 @@ int main(void)
     printf("%s", res);
     return (0);
 }
+*/
