@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 15:10:30 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/25 16:47:41 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/04/29 11:22:43 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 	const char *s = "de trás para a frente";
 	char *res;
 
-	res = ft_strrchr(s, 'b');
+	res = ft_strrchr(s, 'a');
 	if (res == NULL)
 		printf("Já fosteis");
 	else

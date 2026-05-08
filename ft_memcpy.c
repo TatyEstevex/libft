@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-alme <tde-alme@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 13:43:13 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/21 15:20:55 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/05 11:53:45 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-
+/*
 int main(void)
 {
     const unsigned char src [20] = "olhamesta";
@@ -41,3 +41,4 @@ int main(void)
     printf("%s \n", dest);
     return (0);
 }
+*/

@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 13:33:01 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/29 12:24:04 by tde-alme         ###   ########.fr       */
+/*   Created: 2026/05/06 11:59:44 by tde-alme          #+#    #+#             */
+/*   Updated: 2026/05/06 12:19:59 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *s)
+void ft_putnbr_fd(int n, int fd)
 {
-    size_t i;
+    long    nb;
+    char    c;
 
-    i = 0;
-    while (s[i] != '\0' )
-        i++;
-    return(i);
+    nb = n;
+    if (nb < 0)
+    {
+        write(fd, "-", 1);
+        nb = -nb;
+    }
+    if (nb >= 10)
+        ft_putnbr_fd (nb / 10, fd);
+    c = (nb % 10) + '0';
+    write(fd, &c, 1);
 }
-/*
-int main(void)
+int     main(void)
 {
-    char *s;
+    int n;
+    int fd;
 
-    c = "cenas";
-    printf ("%d", ft_strlen(s));
-    return(0);
-
+    n = -4586;
+    fd = 2;
+    ft_putnbr_fd(n, fd);
+    return (0);
 }
-*/

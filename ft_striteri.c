@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 13:33:01 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/29 12:24:04 by tde-alme         ###   ########.fr       */
+/*   Created: 2026/05/05 15:25:07 by tde-alme          #+#    #+#             */
+/*   Updated: 2026/05/05 16:20:13 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlen(const char *s)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    size_t i;
-
+    int  i;
+   
     i = 0;
-    while (s[i] != '\0' )
+    while (s[i])
+    {
+        f(i, &s[i]);
         i++;
-    return(i);
+    }
 }
-/*
+
+void    mudaste(unsigned int t, char *c)
+{
+    *c = *c + t;
+}
 int main(void)
 {
-    char *s;
+    char s[] = "abcd";
 
-    c = "cenas";
-    printf ("%d", ft_strlen(s));
-    return(0);
-
+    ft_striteri(s, mudaste);
+    printf("%s\n",s);
+    return (0);
 }
-*/

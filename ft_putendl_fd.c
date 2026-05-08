@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 13:33:01 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/29 12:24:04 by tde-alme         ###   ########.fr       */
+/*   Created: 2026/05/06 11:42:53 by tde-alme          #+#    #+#             */
+/*   Updated: 2026/05/06 11:58:11 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t ft_strlen(const char *s)
+void ft_putendl_fd(char *s, int fd)
 {
-    size_t i;
+    int i;
 
     i = 0;
-    while (s[i] != '\0' )
-        i++;
-    return(i);
+    while (s[i])
+        {
+            write (fd, &s[i], 1);
+            i++;
+        }
+    write (fd, "\n", 1);
 }
-/*
+
 int main(void)
 {
-    char *s;
+    char    *s = "heloooooo";
+    int     fd;
 
-    c = "cenas";
-    printf ("%d", ft_strlen(s));
+    fd = 1;
+    ft_putendl_fd(s, fd);
     return(0);
-
 }
-*/

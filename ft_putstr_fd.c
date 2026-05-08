@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 13:33:01 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/04/29 12:24:04 by tde-alme         ###   ########.fr       */
+/*   Created: 2026/05/06 11:33:05 by tde-alme          #+#    #+#             */
+/*   Updated: 2026/05/06 12:36:23 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <fcntl.h>
 
-size_t ft_strlen(const char *s)
+void ft_putstr_fd(char *s, int fd)
 {
-    size_t i;
+    int i;
 
     i = 0;
-    while (s[i] != '\0' )
+    while (s[i])
+    {
+        write(fd, &s[i], 1);
         i++;
-    return(i);
+    }
 }
-/*
 int main(void)
 {
-    char *s;
+    char *s = "Bom dia a todos";
+    int     fd;
 
-    c = "cenas";
-    printf ("%d", ft_strlen(s));
+    //fd = 1;
+    fd = open("a.txt", 2);
+    ft_putstr_fd(s, fd);
     return(0);
-
 }
-*/
