@@ -13,7 +13,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strdup(const char *s)
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
 	char	*copy;
 	size_t	tam;

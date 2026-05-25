@@ -6,7 +6,7 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 10:43:50 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/08 14:57:41 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/11 13:49:55 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (!lst || !new)
+	if (!lst && !new)
 		return ;
 	if (!*lst)
 	{

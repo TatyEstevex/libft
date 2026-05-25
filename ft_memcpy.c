@@ -6,7 +6,7 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 13:43:13 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/08 15:16:09 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/11 11:28:37 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*d;
 	const unsigned char	*s;
 
+	if (!dest && !src)
+		return (NULL);
 	d = (unsigned char *) dest;
 	s = (const unsigned char *) src;
 	while (n > 0)

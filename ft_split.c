@@ -6,74 +6,87 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:38:39 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/08 15:57:10 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/11 12:41:19 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	contpal(char const *s, char c)
+static int	contpal(char const *s, char c)
 {
 	int	i;
-	int	palavras;
+	int	words;
 
 	i = 0;
-	palavras = 0;
+	words = 0;
 	if (s == NULL)
 		return (0);
 	while (s[i] != '\0')
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
-			palavras++;
+			words++;
 		i++;
 	}
-	return (palavras);
+	return (words);
 }
 
-void	free_all(char **arr, int i)
+static void	free_all(char **arr, int i)
 {
 	while (i >= 0)
 		free(arr[i--]);
 	free(arr);
 }
 
+static char	*make_word(char const *s, int start, int end)
+{
+	char	*word;
+
+	word = malloc(end - start + 1);
+	if (!word)
+		return (NULL);
+	ft_memcpy(word, &s[start], end - start);
+	word[end - start] = '\0';
+	return (word);
+}
+
+static int	fill_words(char const *s, char c, char **res)
+{
+	int		start;
+	int		i;
+	int		wordsize;
+
+	i = 0;
+	wordsize = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			i++;
+		else
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			res[wordsize] = make_word(s, start, i);
+			if (!res[wordsize])
+				return (free_all(res, wordsize - 1), 0);
+			wordsize++;
+		}
+	}
+	res[wordsize] = NULL;
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	int		i;
 	char	**res;
-	int		inicio;
-	int		pal;
-	size_t	comp;
 
 	if (s == NULL)
 		return (NULL);
 	res = malloc(sizeof(char *) * (contpal(s, c) + 1));
 	if (res == NULL)
 		return (NULL);
-	i = 0;
-	pal = 0;
-	while (s[i])
-	{
-		if (s[i] != c)
-		{
-			inicio = i;
-			while (s[i] != '\0' && s[i] != c)
-				i++;
-			comp = i - inicio;
-			res[pal] = malloc(comp + 1);
-			if (res[pal] == NULL)
-			{
-				free_all(res, pal - 1);
-				return (NULL);
-			}
-			ft_memcpy(res[pal], &s[inicio], comp);
-			res[pal][comp] = '\0';
-			pal++;
-		}
-		else
-			i++;
-	}
-	res[pal] = NULL;
+	if (!fill_words(s, c, res))
+		return (NULL);
 	return (res);
 }
 /*

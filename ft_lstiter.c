@@ -6,7 +6,7 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 16:24:41 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/08 15:06:17 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/11 10:53:48 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		f(lst -> conteudo);
+		f(lst -> content);
 		lst = lst -> next;
 	}
 }

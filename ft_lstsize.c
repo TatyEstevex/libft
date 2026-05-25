@@ -6,7 +6,7 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 14:57:21 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/08 15:10:16 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/11 10:54:25 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	tamanho;
+	int	size;
 
-	tamanho = 0;
+	size = 0;
 	while (lst)
 	{
-		tamanho++;
+		size++;
 		lst = lst -> next;
 	}
-	return (tamanho);
+	return (size);
 }

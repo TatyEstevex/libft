@@ -6,13 +6,13 @@
 /*   By: tde-alme <tde-alm@student.42porto.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 12:20:26 by tde-alme          #+#    #+#             */
-/*   Updated: 2026/05/08 15:12:49 by tde-alme         ###   ########.fr       */
+/*   Updated: 2026/05/11 11:19:19 by tde-alme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	unsigned char	proc;
